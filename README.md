@@ -15,9 +15,8 @@
 
 ## Structural Patterns
 
-| |Creational Patterns|||
+| |Structural Patterns|||
 |:----|:----|:----|:----|
-
 |![](img/adapter-mini.png) | Adapter | Allows objects with incompatible interfaces to collaborate. |[code](./adapter/index.py)|
 |![](img/bridge-mini.png) | Bridge | Lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.|[code](./Bridge/index.py)|
 |![](img/composite-mini.png) | Composite | Lets you compose objects into tree structures and then work with these structures as if they were individual objects.|[code](./Composite/index.py)|
