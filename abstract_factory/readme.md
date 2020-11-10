@@ -1,18 +1,15 @@
 ## 抽象工厂（Abstract Factory）
-> 抽象工厂模式提供了一种方式，可以将一组具有同一主题的单独的工厂封装起来。在正常使用中，客户端程序需要创建抽象工厂的具体实现，然后使用抽象工厂作为接口来创建这一主题的具体对象。
+> Abstract Factory is a creational design pattern, which solves the problem of creating entire product families without specifying their concrete classes.
+  抽象工厂是一种创造性的设计模式，它解决了在不指定具体类的情况下创建整个产品系列的问题
 
-Abstract Factory is a creational design pattern, which solves the problem of creating entire product families without specifying their concrete classes.
+> Abstract Factory defines an interface for creating all distinct products but leaves the actual product creation to concrete factory classes. Each factory type corresponds to a certain product variety.
+  抽象工厂定义了一个用于创建所有不同产品的接口，但将实际的产品创建留给具体的工厂类。每种工厂类型对应于某种产品种类。
+  
+The pattern is easy to recognize by methods, which return a factory object. Then, the factory is used for creating specific sub-components.
 
-Abstract Factory defines an interface for creating all distinct products but leaves the actual product creation to concrete factory classes. Each factory type corresponds to a certain product variety.
+通过返回工厂对象的方法,就可以判断是否是抽象工厂模式。然后，工厂对象用于创建特定的子组件
 
-> The Abstract Factory pattern is pretty common in Python code. Many frameworks and libraries use it to provide a way to extend and customize their standard components.
+### 参考 Reference
 
-Identification: The pattern is easy to recognize by methods, which return a factory object. Then, the factory is used for creating specific sub-components.
-
-Conceptual Example
-This example illustrates the structure of the Abstract Factory design pattern. It focuses on answering these questions:
-
-What classes does it consist of?
-What roles do these classes play?
-In what way the elements of the pattern are related?
- main.py: Conceptual example
+* [abstract-factory](https://refactoring.guru/design-patterns/abstract-factory)
+ 

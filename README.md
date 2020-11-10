@@ -2,6 +2,8 @@
 
 > reference from [DESIGN PATTERNS in Refactoring.Guru](https://refactoring.guru/design-patterns/python)
 
+[中文版](./README-CN.md)
+
 ## Creational Patterns 
 
 | |Creational Patterns|||

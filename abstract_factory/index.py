@@ -1,4 +1,7 @@
-
+"""
+ 抽象工厂 代码实例
+ Abstract Factory Code Demo
+"""
 from __future__ import annotations
 from abc import ABC, abstractmethod
 
