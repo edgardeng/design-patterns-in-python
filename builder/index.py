@@ -9,7 +9,7 @@ class Builder(ABC):
     the Product objects.
     """
 
-    @abstractproperty
+    @property  # abstractproperty
     def product(self) -> None:
         pass
 
