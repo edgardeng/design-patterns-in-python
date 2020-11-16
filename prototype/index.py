@@ -1,3 +1,8 @@
+"""
+Python provides its own interface of Prototype via `copy.copy` and `copy.deepcopy` functions.
+Python通过 copy库 提供原型接口
+"""
+
 import copy
 
 
@@ -25,8 +30,7 @@ class SomeComponent:
     def __copy__(self):
         """
         Create a shallow copy. This method will be called whenever someone calls
-        `copy.copy` with this object and the returned value is returned as the
-        new shallow copy.
+        `copy.copy` with this object and the returned value is returned as the new shallow copy.
         """
 
         # First, let's create copies of the nested objects.
@@ -48,11 +52,10 @@ class SomeComponent:
         `copy.deepcopy` with this object and the returned value is returned as
         the new deep copy.
 
-        What is the use of the argument `memo`? Memo is the dictionary that is
-        used by the `deepcopy` library to prevent infinite recursive copies in
-        instances of circular references. Pass it to all the `deepcopy` calls
-        you make in the `__deepcopy__` implementation to prevent infinite
-        recursions.
+        What is the use of the argument `memo`?
+        Memo is the dictionary that is used by the `deepcopy` library to prevent infinite recursive copies in instances of circular references.
+        Memo是“deepcopy”库用来防止循环引用中出现无限递归副本的字典
+        Pass it to all the `deepcopy` calls you make in the `__deepcopy__` implementation to prevent infinite recursions.
         """
 
         # First, let's create copies of the nested objects.
@@ -76,8 +79,17 @@ if __name__ == "__main__":
     component = SomeComponent(23, list_of_objects, circular_ref)
     circular_ref.set_parent(component)
 
-    shallow_copied_component = copy.copy(component)
+    print(
+        f"id(component.some_circular_ref.parent): "
+        f"{id(component.some_circular_ref.parent)}"
+    )
+    print(
+        f"id(component.some_circular_ref.parent.some_circular_ref.parent): "
+        f"{id(component.some_circular_ref.parent.some_circular_ref.parent)}"
+    )
 
+    shallow_copied_component = copy.copy(component)
+    print('-'*30)
     # Let's change the list in shallow_copied_component and see if it changes in
     # component.
     shallow_copied_component.some_list_of_objects.append("another object")
@@ -93,7 +105,7 @@ if __name__ == "__main__":
             "some_list_of_objects doesn't add it to `component`'s "
             "some_list_of_objects."
         )
-
+    print('-'*30)
     # Let's change the set in the list of objects.
     component.some_list_of_objects[1].add(4)
     if 4 in shallow_copied_component.some_list_of_objects[1]:
@@ -109,10 +121,8 @@ if __name__ == "__main__":
             "some_list_of_objects."
         )
 
+    print('*'*30)
     deep_copied_component = copy.deepcopy(component)
-
-    # Let's change the list in deep_copied_component and see if it changes in
-    # component.
     deep_copied_component.some_list_of_objects.append("one more object")
     if component.some_list_of_objects[-1] == "one more object":
         print(
@@ -126,8 +136,7 @@ if __name__ == "__main__":
             "some_list_of_objects doesn't add it to `component`'s "
             "some_list_of_objects."
         )
-
-    # Let's change the set in the list of objects.
+    print('*'*30)
     component.some_list_of_objects[1].add(10)
     if 10 in deep_copied_component.some_list_of_objects[1]:
         print(
