@@ -16,8 +16,8 @@ class Prototype(ABC):
         pass
 
 
-# class Button(Prototype)
-class Button():
+# class Button():
+class Button(Prototype):
     def __init__(self, x, y, c):
         self.x = x
         self.y = y

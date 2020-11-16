@@ -7,7 +7,6 @@ class SingletonMeta(type):
     """
 
     _instances = {}
-
     _lock: Lock = Lock()  # use a lock to synchronize threads during first access to the Singleton
 
     def __call__(cls, *args, **kwargs):
