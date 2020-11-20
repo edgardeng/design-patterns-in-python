@@ -1,8 +1,9 @@
 '''
-Conceptual Example (via inheritance)
+Adapter Demo Conceptual Example (via inheritance)
+适配器案例
 '''
 
-#
+
 class Target:
     """
     The Target (被适配者) defines the domain-specific interface used by the client code.
@@ -15,8 +16,7 @@ class Target:
 class Adaptee:
     """
     The Adaptee contains some useful behavior, but its interface is incompatible
-    with the existing client code. The Adaptee needs some adaptation before the
-    client code can use it.
+    with the existing client code. The Adaptee needs some adaptation before the client code can use it.
     """
 
     def specific_request(self) -> str:
