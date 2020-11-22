@@ -1,25 +1,24 @@
 from abc import ABC, abstractmethod
-from tokenize import String
-from traitlets import Bool
+
 
 class HEVSuitMedicalAid(ABC):
     @abstractmethod
-    def administerMorphine(self) -> String:
+    def administer_morphine(self) -> str:
         pass
 
 
 class HEVSuit(HEVSuitMedicalAid):
-    def administerMorphine(self) -> String:
+    def administer_morphine(self) -> str:
         return "Morphine administered."
 
 
 class HEVSuitHumanInterface(HEVSuitMedicalAid):
     _physicalSuit: HEVSuit = HEVSuit()
 
-    def administerMorphine(self) -> String:
-        return self._physicalSuit.administerMorphine()
+    def administer_morphine(self) -> str:
+        return self._physicalSuit.administer_morphine()
 
 
 if __name__ == "__main__":
     humanInterface = HEVSuitHumanInterface()
-    print(humanInterface.administerMorphine())
+    print(humanInterface.administer_morphine())

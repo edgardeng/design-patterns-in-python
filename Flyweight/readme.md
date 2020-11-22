@@ -1,8 +1,39 @@
-Flyweight is a structural design pattern that allows programs to support vast quantities of objects by keeping their memory consumption low.
+##Flyweight
+> Flyweight is a structural design pattern that allows programs to support vast quantities of objects by keeping their memory consumption low.
+<br> 享元模式是一种结构型设计模式，允许程序通过保持低内存消耗来支持大量的对象
 
-Usage examples: The Flyweight pattern has a single purpose: minimizing memory intake. If your program doesn’t struggle with a shortage of RAM, then you might just ignore this pattern for a while.
+> Flyweight can be recognized by a creation method that returns cached objects instead of creating new.
+<br> 识别享元模式的方法：返回缓存对象而不是创建新对象的创建
+ 
+意图：
+  1. 运用共享技术有效地支持大量细粒度的对象。
+  2. 使用共享物件，用来尽可能减少内存使用量以及分享资讯给尽可能多的相似物件
+  3. 它适合用于当大量物件只是重复因而导致无法令人接受的使用大量内存。
 
-Identification: Flyweight can be recognized by a creation method that returns cached objects instead of creating new.
+
+主要解决：在有大量对象时，有可能会造成内存溢出，我们把其中共同的部分抽象出来，如果有相同的业务请求，直接返回在内存中已有的对象，避免重新创建。
+
+何时使用： 1、系统中有大量对象。 2、这些对象消耗大量内存。 3、这些对象的状态大部分可以外部化。 4、这些对象可以按照内蕴状态分为很多组，当把外蕴对象从对象中剔除出来时，每一组对象都可以用一个对象来代替。 5、系统不依赖于这些对象身份，这些对象是不可分辨的。
+
+如何解决：用唯一标识码判断，如果在内存中有，则返回这个唯一标识码所标识的对象。
+
+关键代码：用 HashMap 存储这些对象。
+
+应用实例： 1、JAVA 中的 String，如果有则返回，如果没有则创建一个字符串保存在字符串缓存池里面。 2、数据库的数据池。
+
+优点：大大减少对象的创建，降低系统的内存，使效率提高。
+
+缺点：提高了系统的复杂度，需要分离出外部状态和内部状态，而且外部状态具有固有化的性质，不应该随着内部状态的变化而变化，否则会造成系统的混乱。
+
+使用场景： 1、系统有大量相似对象。 2、需要缓冲池的场景。
 
 
-使用共享物件，用来尽可能减少内存使用量以及分享资讯给尽可能多的相似物件；它适合用于当大量物件只是重复因而导致无法令人接受的使用大量内存。
+
+
+### 参考 Reference
+
+* [ Flyweight ](https://refactoring.guru/design-patterns/flyweight)
+ 
+* [菜鸟教程-享元模式](https://www.runoob.com/design-pattern/flyweight-pattern.html)
+
+
