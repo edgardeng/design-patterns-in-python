@@ -32,7 +32,7 @@
 
 | | 行为型模式 |||
 |:----|:----|:----|:----|
-|![](/img/chain-of-responsibility-mini.png) | 责任链 (Chain of Responsibility) | 沿着程序链来传递请求。收到请求后，每个处理程序决定：是处理该请求，还是将其传递给链中的下一个处理程序 |[code](./Chain/index.py)|
+|![](img/chain-of-responsibility-mini.png) | 责任链 (Chain of Responsibility) | 沿着程序链来传递请求。收到请求后，每个处理程序决定：是处理该请求，还是将其传递给链中的下一个处理程序 |[code](./Chain/index.py)|
 |![](img/command-mini.png) | 命令 (Command) | 将请求转换为包含有关该请求的所有信息的独立对象。该转换让我们使用不同的请求参数，将请求的执行进行延迟或加入队列，并支持可撤消的操作|[code](./Command/index.py)|
 |![](img/iterator-mini.png) | 迭代器 (Iterator) |让我们遍历集合中的元素，但不公开其底层表示（列表、堆栈、树等）|[code](./Iterator/index.py)|
 |![](img/mediator-mini.png) | 中介者(Mediator) | 减少对象之间的混乱依赖关系。该模式限制了对象之间的直接通信，并强制其通过中介对象进行协作 |[code](./Mediator/index.py)|
