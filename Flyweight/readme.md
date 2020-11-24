@@ -28,12 +28,8 @@
 使用场景： 1、系统有大量相似对象。 2、需要缓冲池的场景。
 
 
-
-
 ### 参考 Reference
 
 * [ Flyweight ](https://refactoring.guru/design-patterns/flyweight)
  
 * [菜鸟教程-享元模式](https://www.runoob.com/design-pattern/flyweight-pattern.html)
-
-
