@@ -1,6 +1,40 @@
 ## Mediator（中介者）
-> 用一个中介者对象封装一系列的对象交互，中介者使各对象不需要显示地相互作用，从而使耦合松散，而且可以独立地改变它们之间的交互
-   
 
-Mediator is a behavioral design pattern that reduces coupling between components of a program by making them communicate indirectly, through a special mediator object.
+> Mediator is a behavioral design pattern that reduces coupling between components of a program by making them communicate indirectly, through a special mediator object.
+<br>中介者模式是一种行为型设计模式，它通过一个特殊的中介对象使程序的组件之间进行间接通信，从而减少了组件之间的耦合。
+
+> Mediator reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object.
+<br>中介者减少对象之间的混乱依赖关系。该模式限制对象之间的直接通信，并强制它们仅通过中介对象进行协作。
+
+意图：用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。
+
+主要解决：对象与对象之间存在大量的关联关系，这样势必会导致系统的结构变得很复杂，同时若一个对象发生改变，我们也需要跟踪与之相关联的对象，同时做出相应的处理。
+
+何时使用：多个类相互耦合，形成了网状结构。
+
+如何解决：将上述网状结构分离为星型结构。
+
+关键代码：对象 Colleague 之间的通信封装到一个类中单独处理。
+
+应用实例： 1、中国加入 WTO 之前是各个国家相互贸易，结构复杂，现在是各个国家通过 WTO 来互相贸易。 2、机场调度系统。 3、MVC 框架，其中C（控制器）就是 M（模型）和 V（视图）的中介者。
+
+优点： 1、降低了类的复杂度，将一对多转化成了一对一。 2、各个类之间的解耦。 3、符合迪米特原则。
+
+缺点：中介者会庞大，变得复杂难以维护。
+
+使用场景： 1、系统中对象之间存在比较复杂的引用关系，导致它们之间的依赖关系结构混乱而且难以复用该对象。 2、想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类
+
+### 案例一
+
+![](example.png)
+
+Mediator pattern helps you eliminate mutual dependencies between various UI classes: buttons, checkboxes and text labels.
+ 
+[代码CODE](ui_mediator.py)
+
+### 参考 Reference
+
+* [ Mediator ](https://refactoring.guru/design-patterns/mediator)
+ 
+* [菜鸟教程-中介者模式](https://www.runoob.com/design-pattern/mediator-pattern.html)
 
