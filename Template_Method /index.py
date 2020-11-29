@@ -54,9 +54,8 @@ class AbstractClass(ABC):
         pass
 
     # These are "hooks." Subclasses may override them, but it's not mandatory
-    # since the hooks already have default (but empty) implementation. Hooks
-    # provide additional extension points in some crucial places of the
-    # algorithm.
+    # since the hooks already have default (but empty) implementation.
+    # Hooks provide additional extension points in some crucial places of the algorithm.
 
     def hook1(self) -> None:
         pass

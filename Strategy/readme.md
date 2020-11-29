@@ -39,5 +39,4 @@
 
 * [ Strategy ](https://refactoring.guru/design-patterns/strategy)
  
-* [菜鸟教程-状态模式](https://www.runoob.com/design-pattern/strategy-pattern.html)
-
+* [菜鸟教程-策略模式](https://www.runoob.com/design-pattern/strategy-pattern.html)
