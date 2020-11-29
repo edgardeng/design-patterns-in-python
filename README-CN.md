@@ -40,6 +40,6 @@
 |![](img/observer-mini.png) | 观察者 (Observer) | 定义订阅机制，以通知多个对象所观察的对象发生的任何事件 |[code](./Observer/index.py)|
 |![](img/state-mini.png) | 状态 (State) | 对象在其内部状态变化时，改变其行为。就像对象改变了它的类|[code](./State/index.py)|
 |![](img/strategy-mini.png) | 策略 (Strategy) | 定义一系列算法，将每个算法放入单独的类中，并使其对象可互换。|[code](./Strategy/index.py)|
-|![](img/template-method-mini.png) | 模板方法 (Template Method)  | 在超类中定义算法的骨架，但允许子类重写算法的特定步骤而不更改其结构。|[code](./Template_Method /index.py)|
+|![](img/template-method-mini.png) | 模板方法 (Template Method)  | 在超类中定义算法的骨架，但允许子类重写算法的特定步骤而不更改其结构。|[code](Template_Method/index.py)|
 |![](img/visitor-mini.png) | 访问者 (Visitor) | 将算法与其操作的对象分开|[code](./Visitor/index.py)|
  
