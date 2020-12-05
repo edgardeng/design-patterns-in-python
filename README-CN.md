@@ -8,11 +8,11 @@
 
 | |创建型模式|||
 |:----|:----|:----|:----|
-| ![](img/abstract-factory-mini.png) |抽象工厂 (Abstract Factory)| 允许您生成一系列相关对象，而无需指定它们的具体类. | [代码](./abstract_factory/index.py)|
-| ![](img/builder-mini.png) |生成器 (Builder) | 逐步构造复杂的对象，通过使用相同的构造代码生成对象的不同类型和表示 | [代码](./builder/index.py)|
-| ![](img/factory-method-mini.png) | 工厂方法 (Factory Method) | 提供在超类中创建对象的接口，但允许子类更改将要创建的对象的类型 | [代码](./factory/index.py)
-| ![](img/prototype-mini.png) |原型 (Prototype) | 允许您复制现有对象而不使代码依赖于它们的类.|[代码](./prototype/index.py)|
-| ![](img/singleton-mini.png) |单例 (Singleton) | 确保类只有一个实例，同时为该实例提供全局访问点 | [代码](./singleton/index.py)|
+| ![](img/abstract-factory-mini.png) |抽象工厂 (Abstract Factory)| 允许您生成一系列相关对象，而无需指定它们的具体类. | [代码](Abstract_Factory/index.py)|
+| ![](img/builder-mini.png) |生成器 (Builder) | 逐步构造复杂的对象，通过使用相同的构造代码生成对象的不同类型和表示 | [代码](Builder/index.py)|
+| ![](img/factory-method-mini.png) | 工厂方法 (Factory Method) | 提供在超类中创建对象的接口，但允许子类更改将要创建的对象的类型 | [代码](Factory/index.py)
+| ![](img/prototype-mini.png) |原型 (Prototype) | 允许您复制现有对象而不使代码依赖于它们的类.|[代码](Prototype/index.py)|
+| ![](img/singleton-mini.png) |单例 (Singleton) | 确保类只有一个实例，同时为该实例提供全局访问点 | [代码](Sngleton/index.py)|
 
 
 ## 结构型模式
@@ -41,5 +41,5 @@
 |![](img/state-mini.png) | 状态 (State) | 对象在其内部状态变化时，改变其行为。就像对象改变了它的类|[code](./State/index.py)|
 |![](img/strategy-mini.png) | 策略 (Strategy) | 定义一系列算法，将每个算法放入单独的类中，并使其对象可互换。|[code](./Strategy/index.py)|
 |![](img/template-method-mini.png) | 模板方法 (Template Method)  | 在超类中定义算法的骨架，但允许子类重写算法的特定步骤而不更改其结构。|[code](Template_Method/index.py)|
-|![](img/visitor-mini.png) | 访问者 (Visitor) | 将算法与其操作的对象分开|[code](./Visitor/index.py)|
+|![](img/visitor-mini.png) | [访问者 (Visitor)](Visitor/readme.md) | 将算法与其操作的对象分开|[code](./Visitor/index.py)|
  
