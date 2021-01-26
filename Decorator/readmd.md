@@ -35,15 +35,81 @@
 ### 案例二
 
 使用Python的方法装饰器
+```
+import functools
+import time
+import types
+from dataclasses import dataclass
 
+def time_recorder(f):
+    """
+    Print the execution time of decorated function.
+    """
+
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        start = time.perf_counter()
+        rt = f(*args, **kwargs)
+        execution_time = time.perf_counter() - start
+        print(f"The execution time of {f.__name__!r} is {execution_time:.3f} secs")
+        return rt
+
+    return wrapper
+
+
+@time_recorder
+def test(n):
+    time.sleep(n)
+    print('end')
+
+```
 ### 案例三
 
 使用Python的类装饰器
 
+```
+def time_recorder_for_kls(kls):
+    class Wapper(object):
+        def __init__(self, *args, **kwargs):
+            self.instance = kls(*args, **kwargs)
+
+        def __getattribute__(self, attr):
+            try:
+                ar = super().__getattribute__(attr)
+            except AttributeError:
+                pass
+            else:
+                return ar
+            f = self.instance.__getattribute__(attr)
+            if isinstance(f, (types.MethodType, types.FunctionType)):
+                return time_recorder(f)
+            else:
+                return f
+
+    return Wapper
+
+
+@time_recorder_for_kls
+class T:
+
+    def func_1(self,a):
+        time.sleep(0.1)
+        print('end func 1')
+
+    @classmethod
+    def func_2(cls):
+        time.sleep(0.2)
+        print('end func 2')
+
+    @staticmethod
+    def func_3():
+        time.sleep(0.3)
+        print('end func 3')
+
+```
 
 ### 参考 Reference
 
 * [ Decorator ](https://refactoring.guru/design-patterns/decorator)
  
 * [菜鸟教程-装饰器模式](https://www.runoob.com/design-pattern/decorator-pattern.html)
-
